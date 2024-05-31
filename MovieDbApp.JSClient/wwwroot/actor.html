@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Actor UI</title>
+    <link rel="stylesheet" href="actorstyle.css"/>
+</head>
+<body>
+    <h1>Catalog of Actors</h1>
+
+    <div id="formdiv">
+        <label>New Actor's Name</label>
+        <input type="text" id="newActorName" />
+        <button type="button" onclick="create()">Add New Actor</button>
+    </div>
+    <div id="uformdiv">
+        <label>Name</label>
+        <input type="text" id="actortoupdate" />
+        <button type="button" onclick="update()">Update Actor</button>
+
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name of Actor</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        <td></td>
+        <td></td>
+        </tbody>
+    </table>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="actorscript.js"></script>
+
+</body>
+</html>

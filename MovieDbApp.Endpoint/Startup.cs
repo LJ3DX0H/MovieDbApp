@@ -71,6 +71,11 @@ namespace MovieDbApp.Endpoint
                 await context.Response.WriteAsJsonAsync(response);
             }));
 
+            app.UseCors(x => x
+                .AllowCredentials()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithOrigins("http://localhost:16325"));
 
             app.UseRouting();
 

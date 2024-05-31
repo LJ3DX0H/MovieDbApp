@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieDbApp.Test", "MovieDbA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieDbApp.Endpoint", "MovieDbApp.Endpoint\MovieDbApp.Endpoint.csproj", "{9F72C0C4-8C13-4765-B4CD-B7037275C1C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDbApp.WpfClient", "MovieDbApp.WpfClient\MovieDbApp.WpfClient.csproj", "{6713843C-0BD2-4211-8249-FB4596F84DB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieDbApp.WpfClient", "MovieDbApp.WpfClient\MovieDbApp.WpfClient.csproj", "{6713843C-0BD2-4211-8249-FB4596F84DB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDbApp.JSClient", "MovieDbApp.JSClient\MovieDbApp.JSClient.csproj", "{D54A7176-8369-49F8-A35D-96ACCF0786F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{6713843C-0BD2-4211-8249-FB4596F84DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6713843C-0BD2-4211-8249-FB4596F84DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6713843C-0BD2-4211-8249-FB4596F84DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D54A7176-8369-49F8-A35D-96ACCF0786F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54A7176-8369-49F8-A35D-96ACCF0786F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54A7176-8369-49F8-A35D-96ACCF0786F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54A7176-8369-49F8-A35D-96ACCF0786F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
