@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Role UI</title>
+    <link rel="stylesheet" href="actorstyle.css" />
+</head>
+<body>
+    <h1>Catalog of Roles</h1>
+
+    <div id="formdiv">
+        <label>New Role's Name</label>
+        <input type="text" id="newRoleName" />
+        <button type="button" onclick="create()">Add New Role</button>
+    </div>
+    <div id="uformdiv">
+        <label>Name</label>
+        <input type="text" id="roletoupdate" />
+        <button type="button" onclick="update()">Update Role</button>
+
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name of Roles</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        <td></td>
+        <td></td>
+        </tbody>
+    </table>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="rolescript.js"></script>
+
+</body>
+</html>
