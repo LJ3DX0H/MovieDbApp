@@ -21,10 +21,12 @@ namespace MovieDbApp.Repository
         public override void Update(Role item)
         {
             var old = Read(item.RoleId);
-            foreach (var prop in old.GetType().GetProperties())
+            /*foreach (var prop in old.GetType().GetProperties())
             {
                 prop.SetValue(old, prop.GetValue(item));
-            }
+            }*/
+            old.RoleId = item.RoleId;
+            old.RoleName = item.RoleName;
             ctx.SaveChanges();
         }
     }

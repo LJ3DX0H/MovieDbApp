@@ -134,3 +134,13 @@ function update() {
         });
 
 }
+
+function myFunc1() {
+    location.replace("actor.html")
+}
+function myFunc2() {
+    location.replace("director.html")
+}
+function myFunc3() {
+    location.replace("movie.html")
+}
