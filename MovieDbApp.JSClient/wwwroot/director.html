@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Director UI</title>
+    <link rel="stylesheet" href="actorstyle.css" />
+    <title></title>
+</head>
+<body>
+    <h1>Catalog of Directors</h1>
+
+    <div id="formdiv">
+        <label>New Director's Name</label>
+        <input type="text" id="newDirectorName" />
+        <button type="button" onclick="create()">Add New Director</button>
+    </div>
+    <div id="uformdiv">
+        <label>Name</label>
+        <input type="text" id="directortoupdate" />
+        <button type="button" onclick="update()">Update Director</button>
+
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name of Director</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        <td></td>
+        <td></td>
+        </tbody>
+    </table>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="directorscript.js"></script>
+</body>
+</html>
