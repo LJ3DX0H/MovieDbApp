@@ -1,0 +1,110 @@
+﻿<Window x:Class="MovieDbApp.WpfClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MovieDbApp.WpfClient"
+        mc:Ignorable="d"
+        Title="Actor Editor" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid>
+            <TabControl>
+                <TabItem Header="Actors">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <ListBox ItemsSource="{Binding Actors}" SelectedItem="{Binding SelectedActor}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding ActorName}" />
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <StackPanel Grid.Column="1">
+                            <Label Content="Name" Background="LightBlue" Padding="10" />
+                            <TextBox Text="{Binding SelectedActor.ActorName}" Padding="10" Margin="0,0,0,30" />
+                            <Button Content="Create Actor" Command="{Binding CreateActorCommand}" Margin="10" Padding="10" />
+                            <Button Content="Delete Actor" Command="{Binding DeleteActorCommand}" Margin="10" Padding="10" />
+                            <Button Content="Update Actor" Command="{Binding UpdateActorCommand}" Margin="10" Padding="10" />
+                            <Label Content="{Binding ErrorMessage}" FontSize="18" Foreground="Red" HorizontalContentAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Directors">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <ListBox ItemsSource="{Binding Directors}" SelectedItem="{Binding SelectedDirector}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding DirectorName}" />
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <StackPanel Grid.Column="1">
+                            <Label Content="Name" Background="LightBlue" Padding="10" />
+                            <TextBox Text="{Binding SelectedDirector.DirectorName}" Padding="10" Margin="0,0,0,30" />
+                            <Button Content="Create Director" Command="{Binding CreateDirectorCommand}" Margin="10" Padding="10" />
+                            <Button Content="Delete Director" Command="{Binding DeleteDirectorCommand}" Margin="10" Padding="10" />
+                            <Button Content="Update Director" Command="{Binding UpdateDirectorCommand}" Margin="10" Padding="10" />
+                            <Label Content="{Binding ErrorMessage}" FontSize="18" Foreground="Red" HorizontalContentAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Movies">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <ListBox ItemsSource="{Binding Movies}" SelectedItem="{Binding SelectedMovie}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Title}" />
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <StackPanel Grid.Column="1">
+                            <Label Content="Name" Background="LightBlue" Padding="10" />
+                            <TextBox Text="{Binding SelectedMovie.Title}" Padding="10" Margin="0,0,0,30" />
+                            <Button Content="Create Movie" Command="{Binding CreateMovieCommand}" Margin="10" Padding="10" />
+                            <Button Content="Delete Movie" Command="{Binding DeleteMovieCommand}" Margin="10" Padding="10" />
+                            <Button Content="Update Movie" Command="{Binding UpdateMovieCommand}" Margin="10" Padding="10" />
+                            <Label Content="{Binding ErrorMessage}" FontSize="18" Foreground="Red" HorizontalContentAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Roles">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <ListBox ItemsSource="{Binding Roles}" SelectedItem="{Binding SelectedRole}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding RoleName}" />
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <StackPanel Grid.Column="1">
+                            <Label Content="Name" Background="LightBlue" Padding="10" />
+                            <TextBox Text="{Binding SelectedRole.RoleName}" Padding="10" Margin="0,0,0,30" />
+                            <Button Content="Create Role" Command="{Binding CreateRoleCommand}" Margin="10" Padding="10" />
+                            <Button Content="Delete Role" Command="{Binding DeleteRoleCommand}" Margin="10" Padding="10" />
+                            <Button Content="Update Role" Command="{Binding UpdateRoleCommand}" Margin="10" Padding="10" />
+                            <Label Content="{Binding ErrorMessage}" FontSize="18" Foreground="Red" HorizontalContentAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Window>
